@@ -4,6 +4,11 @@
 }
 
 <h2>Index</h2>
-<p>Esse é o teste do ASP.NET MVC!</p>
-<p>Teste para chamar a action.</p>
-
+<br />
+<br />
+<p>Digite seu nome:</p>
+@using (Html.BeginForm("Index", "Teste", FormMethod.Post))
+{
+    <input type="text" id="txb" name="nome" />
+    <input type="submit" value="Enviar!" />
+}

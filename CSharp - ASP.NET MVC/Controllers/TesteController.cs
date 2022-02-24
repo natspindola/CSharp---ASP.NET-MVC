@@ -13,5 +13,13 @@ namespace CSharp___ASP.NET_MVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Index(FormCollection formCollection)
+        {
+            string nome = formCollection["nome"];
+            ViewBag.Mensagem = nome;
+            return View("Saudacao");
+        }
     }
 }

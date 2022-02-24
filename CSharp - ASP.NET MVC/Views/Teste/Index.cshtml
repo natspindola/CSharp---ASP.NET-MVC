@@ -9,6 +9,7 @@
 <p>Digite seu nome:</p>
 @using (Html.BeginForm("Index", "Teste", FormMethod.Post))
 {
-    <input type="text" id="txb" name="nome" />
+    @Html.TextBox("nome", null, new { id = "txbNome", @class = "minhaClasseCss" })
+    //<input type="text" id="txb" name="nome" />
     <input type="submit" value="Enviar!" />
 }

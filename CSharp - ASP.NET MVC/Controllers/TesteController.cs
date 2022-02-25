@@ -19,7 +19,7 @@ namespace CSharp___ASP.NET_MVC.Controllers
         public ActionResult Index(Pessoa pessoa)
         {
             ViewBag.PessoaInformada = pessoa;
-            return View("Saudacao");
+            return View("Saudacao", pessoa);
         }
     }
 }

@@ -29,5 +29,7 @@ namespace CSharp___ASP.NET_MVC.Models
         [MaxLength(25, ErrorMessage = "O email pode ter no máximo 25 caracteres ")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        public bool Ative { get; set; }
     }
 }

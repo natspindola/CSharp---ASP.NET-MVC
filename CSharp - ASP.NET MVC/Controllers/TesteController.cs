@@ -16,7 +16,7 @@ namespace CSharp___ASP.NET_MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Pessoa pessoa)
+        public ActionResult Index([Bind(Exclude = "Ativo")]Pessoa pessoa)
         {
             if (ModelState.IsValid) 
             {

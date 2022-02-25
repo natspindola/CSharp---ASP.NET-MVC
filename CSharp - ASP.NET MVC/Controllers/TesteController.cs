@@ -16,6 +16,7 @@ namespace CSharp___ASP.NET_MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index([Bind(Exclude = "Ativo")]Pessoa pessoa)
         {
             if (ModelState.IsValid) 

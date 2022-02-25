@@ -18,8 +18,15 @@ namespace CSharp___ASP.NET_MVC.Controllers
         [HttpPost]
         public ActionResult Index(Pessoa pessoa)
         {
-            ViewBag.PessoaInformada = pessoa;
-            return View("Saudacao", pessoa);
+            if (ModelState.IsValid) 
+            {
+                ViewBag.PessoaInformada = pessoa;
+                return View("Saudacao", pessoa);
+            }
+            else
+            {
+                return View(pessoa);
+            }
         }
     }
 }

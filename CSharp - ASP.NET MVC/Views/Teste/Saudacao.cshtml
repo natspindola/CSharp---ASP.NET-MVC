@@ -8,5 +8,5 @@
 <h2>Saudação</h2>
 
 <p>Olá! Seja bem vindo (a). @Model.Nome</p>
-@Html.Label("Idade: ") @Html.EditorFor(p => p.idade)
-@Html.Label("Endereço: ") @Html.EditorFor(p => p.Endereco)
+@Html.LabelFor(p => p.idade) @Html.EditorFor(p => p.idade)
+@Html.LabelFor(p => p.Endereco) @Html.EditorFor(p => p.Endereco)

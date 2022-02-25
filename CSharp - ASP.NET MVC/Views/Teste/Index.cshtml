@@ -1,4 +1,6 @@
-﻿
+﻿@using CSharp___ASP.NET_MVC.Models;
+@model Pessoa
+
 @{
     ViewBag.Title = "Index";
 }
@@ -9,7 +11,11 @@
 <p>Digite seu nome:</p>
 @using (Html.BeginForm("Index", "Teste", FormMethod.Post))
 {
-    @Html.TextBox("nome", null, new { id = "txbNome", @class = "minhaClasseCss" })
-    //<input type="text" id="txb" name="nome" />
+    @Html.LabelFor(p => p.Nome)
+    @Html.TextBoxFor(p => p.Nome, new { id = "tbNome"})
+    @Html.LabelFor(p => p.idade)
+    @Html.TextBoxFor(p => p.idade)
+    @Html.LabelFor(p => p.Endereco)
+    @Html.TextBoxFor(p => p.Endereco)
     <input type="submit" value="Enviar!" />
 }

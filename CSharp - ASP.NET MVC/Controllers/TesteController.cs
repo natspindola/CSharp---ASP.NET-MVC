@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CSharp___ASP.NET_MVC.Models;
 
 namespace CSharp___ASP.NET_MVC.Controllers
 {
@@ -15,9 +16,9 @@ namespace CSharp___ASP.NET_MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string nome)
+        public ActionResult Index(Pessoa pessoa)
         {
-            ViewBag.Mensagem = nome;
+            ViewBag.PessoaInformada = pessoa;
             return View("Saudacao");
         }
     }

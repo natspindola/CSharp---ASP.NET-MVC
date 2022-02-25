@@ -11,11 +11,23 @@
 <p>Digite seu nome:</p>
 @using (Html.BeginForm("Index", "Teste", FormMethod.Post))
 {
+    @Html.ValidationSummary(true)
+
     @Html.LabelFor(p => p.Nome)
-    @Html.EditorFor(p => p.Nome, new { id = "tbNome"})
+    @Html.EditorFor(p => p.Nome, new { id = "tbNome" })
+    @Html.ValidationMessageFor(p => p.Nome)
+
     @Html.LabelFor(p => p.idade)
     @Html.EditorFor(p => p.idade)
+    @Html.ValidationMessageFor(p => p.idade)
+
     @Html.LabelFor(p => p.Endereco)
     @Html.EditorFor(p => p.Endereco)
+    @Html.ValidationMessageFor(p => p.Endereco)
+
+    @Html.LabelFor(p => p.Email)
+    @Html.EditorFor(p => p.Email)
+    @Html.ValidationMessageFor(p => p.Email)
+
     <input type="submit" value="Enviar!" />
 }

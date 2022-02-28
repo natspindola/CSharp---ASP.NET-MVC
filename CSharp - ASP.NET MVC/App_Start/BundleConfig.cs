@@ -26,7 +26,8 @@ namespace CSharp___ASP.NET_MVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-            BundleTable.EnableOptimizations = true;
+
+            //BundleTable.EnableOptimizations = true; ativa e desativa o debug
         }
     }
 }
